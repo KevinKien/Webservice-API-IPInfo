@@ -10,7 +10,7 @@
   <a href="#api-documentation">API Documentation</a> 
 </p>
 
-Webservice and API solution to identify country, region, city, latitude & longitude, ZIP code, time zone, ISP, VPN and residential proxies. IPAddress information is obtained from GeoIP2-City and checking IPAddress is proxy or not is obtained from IP2Proxy.com.
+Webservice and API solution to identify country, region, city, latitude & longitude, ZIP code, time zone, ISP, VPN and residential proxies. IPAddress information is obtained from GeoIP2 and checking IPAddress is proxy or not is obtained from IP2Proxy.com.
 
 ## How It Works
 <h3 align="center">
