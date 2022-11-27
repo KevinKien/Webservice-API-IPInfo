@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+        <title>IPInfo by KevinKien</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+</head>
+<body>
+    <div id="app">
+        <div id="main-container" role="document">
+            <main role="main">
+                <div class="container-xxl">
+                    <div class="col-md-9 px-3 mx-auto">
+                        <div class="text-center mt-20 mb-12">
+                            <h1 class="display-3 ls-tight">
+                                <span class="d-inline-flex text-transparent bg-clip-text gradient-bottom-right start-purple-500 end-indigo-400 position-relative">IPinfo</span> Location</h1>
+                            <p class="text-lg font-semibold mt-5 px-lg-32">Identify Geographical Location and Proxy by IP Address.</p>
+                            <div class="mx-sm-n2 mt-7">
+                                <form action="{{ url_for('home') }}" method="post">
+                                    <div class="input-group mb-3">
+                                      <input type="text" class="form-control" placeholder="IPAddress" id="IPAddress" name="IPAddress">
+                                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                                      <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row g-6 g-lg-6 ">
+                            <div class="position-relative rounded-4 shadow-4-hover bg-surface-secondary">
+                                <div class="p-5 p-md-5 p-xl-10" style="size: 16px">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Your IP Address</td>
+                                                <td>{{ ip }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Country</td>
+                                                <td>{{ Country }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>City</td>
+                                                <td>{{ City }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Coordinates</td>
+                                                <td>{{ Location }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ISP</td>
+                                                <td>{{ ISP }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Time Zone</td>
+                                                <td>{{ Time_zone }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Proxy</td>
+                                                <td>{{ Proxy }}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted text-sm font-semibold text-center my-12">Made with <i class="bi bi-heart mx-1"></i> by <a href="https://kevinkien.github.io">KevinKien</a> | <a href="https://kevinkien.github.io">API Document </a></p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
