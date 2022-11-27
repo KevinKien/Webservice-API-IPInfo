@@ -51,7 +51,12 @@ Access to ip:port example: ```http://127.0.0.1:8080```
 ### API get ip info
 ```
 curl http://192.168.1.108:8080/api/195.149.108.41
-{"City":"Europe","Country":"Ukraine","IPAdress":"195.149.108.41","ISP":"The private businessman Buryanov Konstantin Volodi","Location":"32.263,48.5043","Time_zone":"Europe/Kiev"}
+{"City":"Europe",
+"Country":"Ukraine",
+"IPAdress":"195.149.108.41",
+"ISP":"The private businessman Buryanov Konstantin Volodi",
+"Location":"32.263,48.5043",
+"Time_zone":"Europe/Kiev"}
 ```
 
 ### API check ip proxy
