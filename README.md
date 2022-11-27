@@ -39,7 +39,10 @@ Install pakages
 ```
 pip3 install -r requirements.txt
 ```
-
+Run service
+```
+python3 runserver.py
+```
 ### Usage
 Access to ip:port example: ```http://127.0.0.1:8080```
 
